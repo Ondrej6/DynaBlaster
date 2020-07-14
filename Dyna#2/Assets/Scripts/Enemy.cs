@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Enemy_movement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     /*
      * Skript pre pohyb a interakciu nepriateľov na mape

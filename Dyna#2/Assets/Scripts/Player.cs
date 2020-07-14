@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     /*
      * Skript riadi všetky hráčove funkcie
