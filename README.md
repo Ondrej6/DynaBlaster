@@ -18,7 +18,7 @@ Hra obsahuje 3 rôzne levely. Vďaka jednoduchému ovládaniu je možné vytvori
 
 Úlohou hráča je zničiť príšery vo všetkých troch leveloch. Hráč má jeden život a môže použiť v jednom momente 3 bomby.
 Hra končí:
-1.  Hráč prejde cez portál v poslednom levely
+1.  Hráč prejde cez portál v poslednom levele
 2.  Hráč je zničený (exploduje pri ňom bomba alebo sa dotkne príšery)
 
 ## Programátorská časť
@@ -41,7 +41,7 @@ Všetky príšery majú implementovaný iba jednoduchý pohyb, v prípade kolíz
 
 ### Priebeh práce
 
-Pri výbere enginu som sa rozhodoval medzi Unity a MonoGame. Vďaka recenziám a aj zvedavosti, keďže tento engine využívajú viaceré kvalitné herné tituly, som si zvolil Unity. Napriek tomu, že Unity je často označované ako intuitívne, mal som dlho problém zorientovať sa v novom rozhraní. Veľkou výhodou je ale jeho jednoduchosť a aj s málo programovaním sa dá vytvoriť zaujímavá hra. Určite má tento engine veľký potenciál, ktorý som v tomto projekte ani nedokázal využiť. S istotou sa ešte tomuto enginu budem venovať viac.
+Pri výbere enginu som sa rozhodoval medzi Unity a MonoGame. Vďaka recenziám a aj zvedavosti, keďže tento engine využívajú viaceré kvalitné herné tituly, som si zvolil Unity. Napriek tomu, že Unity je často označované ako intuitívne, mal som dlho problém zorientovať sa v novom rozhraní. Veľkou výhodou je ale jeho jednoduchosť a aj s menšími skúsenosťami s programovaním sa dá vytvoriť zaujímavá hra. Určite má tento engine veľký potenciál, ktorý som v tomto projekte ani nedokázal využiť. S istotou sa ešte tomuto enginu budem venovať viac.
 
 ### Možné vylepšenia
 
