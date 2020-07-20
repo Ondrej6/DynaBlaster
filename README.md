@@ -29,11 +29,39 @@ Na úpravu hry je potrebný [Unity engine](https://unity3d.com/get-unity/downloa
 
 Hra je rozdelená do jednotlivých skriptov (popisy pri jednotlivých funkciách)
 
-#### Kolízie
+#### Grid
+
+Dvojvrstvový objekt predstavujúci mapu rozdelenú na štvorčeky. Spodná vrstva predstavuje vrstvu slúžiacu na pohyb (zem), na ktorej sú položené všetky objekty. Horná vrstva slúži na umiestnenie všetkých objektov na mape. Ide o hráča, príšery, zničiteľné a nezničiteľné bloky, bomby, explózie a portál do ďalšieho levelu. K tomuto objektu je priradení skript MapDestroyer, ktorý slúži na mazanie blokov a úpravu mapy po výbuchu.
+
+#### Player
+
+Herný objekt, ktorý predstavuje hráča. Priradení je k nemu skript Player, ktorý riadi pohyb a kontroluje kolízie a interakcie s inými objektmi. Ako RigidBody je k nemu priradená animovaná postavička (animáciu riadi animator). Pre jednoduchšie rozšírenie/úpravu obsahuje premenné rýchlosť a počet životov.
+
+#### BombSpawner
+
+Tento objekt slúži na položenie bomby na herný plán. Je k nemu priradený rovnomenný skript. BombSpawner je spojený s hráčom, pretože len ten môže v mojej verzií položiť bombu. V skripte je aj premenná tilemap, do ktorej je dosadená hracia plocha, bomb  - tá predstavuje bombu ako objekt na mape -  a premennú bombCount, ktorá určuje maximálny počet bômb na mape v jednom momente.
+
+#### Enemy
+
+Ide o jednotlivé objekty príšer. Kukaždej kópii je pripojený skript Enemy, ktorý riadi pohyba a interakciu s ostatnými objektmi. Pevný objekt (Rigidbody) slúži na detekciu kolízii s ostatnými objektmi a ide vlastne o obrázok príšery. Premenné horizontal, vpravo, hore určujú smer pohybu.
+
+#### NextLevel
+
+Objekt slúži na teleportovanie sa do nasledujúceho levelu. To nastáva len v prípade, ak žiadna príšera nie je na mape. Objekt obsahuje skript LevelUp, ktorý sa stará o logiku za prechodom do nového levelu. Samotný objekt je len obrázok, ktorý detekuje kolízie.
+
+#### Main Camera a i.
+
+Zvyšné objekty sú veľmi jednoduché. Main Camera vytvára záber a plátno (Canvas) riadi menu pomocou tlačitko (buttons). V menu sú použité dva skripty, GameOver a MainMenu2, riadia zmenu scén pre menu a pri prehre hry.
+
+### Explózia a plameň
+
+Explózia je riadená skriptom MapDestroyer. Spočíva v určení bunky na mape kde je položená bomba a po odpočítavaní sa spúšťa animácia explózie, ktorá vytvára objekt Explosion a kolízia Explosion s inými objektmi odstráni blok (pokiaľ je zničiteľný). Nasleduje propagácia výbuchu do štyroch smerov totožným spôsobom. V prípade kolízie explózia nepokračuje ďalej.
+
+### Kolízie
 
 Kolízie objektov sú riadené pomocou Unity funkcie OnCollisionEnter2D, ktorá zachytáva momenty jednotlivých kolízií pevných objektov (RigidBody)
 
-#### Pohyb príšer
+### Pohyb príšer
 
 Všetky príšery majú implementovaný iba jednoduchý pohyb, v prípade kolízie so stenou zmení sa vektor pohybu o 180 stupňov.
 
