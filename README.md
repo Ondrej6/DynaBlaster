@@ -51,7 +51,7 @@ Objekt slúži na teleportovanie sa do nasledujúceho levelu. To nastáva len v 
 
 #### Main Camera a i.
 
-Zvyšné objekty sú veľmi jednoduché. Main Camera vytvára záber a plátno (Canvas) riadi menu pomocou tlačitko (buttons). V menu sú použité dva skripty, GameOver a MainMenu2, riadia zmenu scén pre menu a pri prehre hry.
+Zvyšné objekty sú veľmi jednoduché. Main Camera vytvára záber na scénu a plátno (Canvas) riadi menu pomocou tlačitko (buttons). V menu sú použité dva skripty, GameOver a MainMenu2, riadia zmenu scén pre menu a pri prehre hry.
 
 ### Explózia a plameň
 
